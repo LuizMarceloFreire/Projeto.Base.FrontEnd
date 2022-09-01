@@ -35,5 +35,4 @@ export class EstadiosDeletarComponent implements OnInit {
       console.log(error);
     });
   }
-
 }
