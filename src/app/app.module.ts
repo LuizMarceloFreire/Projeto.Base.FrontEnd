@@ -1,3 +1,5 @@
+import { ClubesRoutingModule } from './clube/clube.routing';
+import { ClubeModule } from './clube/clube.module';
 import { EstadioModule } from './estadio/estadio.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -30,6 +32,8 @@ import { EstadiosRoutingModule } from './estadio/estadio.routing';
     HttpClientModule,
     EstadioModule,
     EstadiosRoutingModule,
+    ClubeModule,
+    ClubesRoutingModule,
     ReactiveFormsModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false})]
   ],
