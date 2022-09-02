@@ -28,7 +28,6 @@ export class EstadiosDeletarComponent implements OnInit {
   deletarEstadio(){
     this.estadioService.deletarEstadio(this.estadioId).subscribe(res => {
       this.gerenciadorDeRotas.navigate(['estadios']).then(() =>{
-        this.toast.success("Deletado com sucesso!");
       });
     },
     error =>{

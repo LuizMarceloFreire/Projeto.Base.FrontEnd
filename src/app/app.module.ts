@@ -18,6 +18,7 @@ import { HomeComponent } from './navegacao/home/home.component';
 import { FooterComponent } from './navegacao/footer/footer.component';
 import { rootRouterConfig } from './app.routes';
 import { EstadiosRoutingModule } from './estadio/estadio.routing';
+import { ToastrService } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EstadiosRoutingModule } from './estadio/estadio.routing';
     [RouterModule.forRoot(rootRouterConfig, { useHash: false})]
   ],
   providers: [
-    {provide: APP_BASE_HREF, useValue: '/'}
+    {provide: APP_BASE_HREF, useValue: '/'},
+    {provide: ToastrService}
   ],
   bootstrap: [AppComponent]
 })

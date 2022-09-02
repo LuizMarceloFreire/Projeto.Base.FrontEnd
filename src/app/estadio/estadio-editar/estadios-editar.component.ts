@@ -57,7 +57,6 @@ export class EstadiosEditarComponent implements OnInit {
     this.estadio = this.formulario.value;
     this.estadioService.editarEstadio(this.estadio).subscribe(res =>{
       this.gerenciadorDeRotas.navigate(['estadios']).then(() =>{
-        this.toast.success("Deletado com sucesso!");
       });
     }, 
     error => console.log(error));

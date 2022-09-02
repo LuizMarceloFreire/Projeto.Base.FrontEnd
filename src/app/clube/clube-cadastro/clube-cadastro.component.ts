@@ -49,7 +49,6 @@ export class ClubeCadastroComponent implements OnInit {
     this.clube = this.formulario.value;
     this.clubeService.cadastrarClube(this.clube).subscribe(res =>{
       this.gerenciadorDeRotas.navigate(['/clubes']).then(() =>{
-        this.toast.success("Salvo com sucesso!");
       });
     });
   }

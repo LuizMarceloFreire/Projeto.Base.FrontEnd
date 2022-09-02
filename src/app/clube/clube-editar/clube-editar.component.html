@@ -1,1 +1,38 @@
-
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col-lg-6">
+            <h2 class="display-4 font-weight-light">Editar Clube</h2>
+        </div>
+    </div>
+    <form [formGroup]="formulario" (submit)="Salvar()">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" formControlName="ativo" id="flexCheckChecked" [checked]="situacaoClube">
+        <label class="form-check-label" for="flexCheckChecked">
+          {{situacaoLabel}}
+        </label>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input formControlName="nome" name="nome" type="text" class="form-control" id="nome">
+      </div>
+      <div class="form-group">
+        <label for="anoFundacao">Ano de Fundação</label>
+        <input formControlName="anoFundacao" name="anoFundacao" type="number" class="form-control" id="anoFundacao">
+      </div>
+      <div class="form-group">
+        <label for="urlRedeSocial">Rede Social</label>
+        <input formControlName="urlRedeSocial" name="urlRedeSocial" type="text" class="form-control" id="urlRedeSocial">
+      </div>
+      <div class="form-group">
+        <label for="estadios">Estadios</label>
+        <select placeholder="Selecionar..." class="form-control" formControlName="estadioId" name="estadioId" id="estadioId">
+            <ng-container>
+                <option [ngValue]="estadio.id">{{estadio.nome}}</option>
+            </ng-container>
+        </select>         
+      </div>
+      <button type="submit" class="btn btn-primary float-right">Salvar</button>
+    </form>
+</div>
+<br>

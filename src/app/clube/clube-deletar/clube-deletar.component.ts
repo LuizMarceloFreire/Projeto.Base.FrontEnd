@@ -28,7 +28,6 @@ export class ClubeDeletarComponent implements OnInit {
   deletarClube(){
     this.clubeService.deletarClube(this.clubeId).subscribe(res => {
       this.gerenciadorDeRotas.navigate(['clubes']).then(() =>{
-        this.toast.success("Deletado com sucesso!");
       });
     },
     error =>{
