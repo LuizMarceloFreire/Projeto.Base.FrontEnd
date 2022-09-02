@@ -65,7 +65,6 @@ export class ClubeEditarComponent implements OnInit {
     this.clubeService.editarClube(this.clube).subscribe(
       (res) => {
         this.gerenciadorDeRotas.navigate(["clubes"]).then(() => {
-          this.toast.success("Deletado com sucesso!");
         });
       },
       (error) => console.log(error)
